@@ -21,6 +21,8 @@ $ podman \
   docker://docker.io/pmoor/prober7
 ```
 
+Or use a Quadlet configuration file - see `prober7.container` in this repository.
+
 To build and publish a new image (as a reminder for myself):
 
 ```sh

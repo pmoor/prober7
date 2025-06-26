@@ -1,0 +1,20 @@
+# example Quadlet configuration file
+# place in .config/containers/systemd/prober7.container and then start with
+# `systemctl --user start prober7`
+
+[Unit]
+Description=Init7 Prober
+
+[Container]
+Image=docker://docker.io/pmoor/prober7
+Environment=PROBE_ID=0x12345678
+ContainerName=prober7
+LogDriver=k8s-file
+
+[Service]
+Restart=always
+TimeoutStartSec=120
+
+[Install]
+WantedBy=default.target
+
